@@ -1,64 +1,191 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+JSON Link: [https://www.getpostman.com/collections/d008250622f3e4b0dee8](https://www.getpostman.com/collections/d008250622f3e4b0dee8)
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+------ Below is the index request ------
+http://localhost:8000/api/users
 
-## About Laravel
+Response:
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+{
+    "code": 200,
+    "message": "Success",
+    "data": [
+        {
+            "id": 1,
+            "name": "Zharkun",
+            "email": "zharkun@hotmail.sg",
+            "email_verified_at": null,
+            "created_at": "2022-06-09T09:00:04.000000Z",
+            "updated_at": "2022-06-09T16:23:29.000000Z"
+        },
+        {
+            "id": 2,
+            "name": "Huri",
+            "email": "HuriKetam@gmail.com",
+            "email_verified_at": null,
+            "created_at": "2022-06-09T09:00:27.000000Z",
+            "updated_at": "2022-06-09T09:00:27.000000Z"
+        },
+        {
+            "id": 7,
+            "name": "Kelapa",
+            "email": "AirKelapa@Goreng.com",
+            "email_verified_at": null,
+            "created_at": "2022-06-09T09:35:42.000000Z",
+            "updated_at": "2022-06-09T09:35:42.000000Z"
+        },
+        {
+            "id": 11,
+            "name": "Duck",
+            "email": "Ducky@Channel.com",
+            "email_verified_at": null,
+            "created_at": "2022-06-09T09:36:27.000000Z",
+            "updated_at": "2022-06-09T15:55:06.000000Z"
+        },
+        {
+            "id": 12,
+            "name": "Test",
+            "email": "Test@gmail.com",
+            "email_verified_at": null,
+            "created_at": "2022-06-09T09:47:47.000000Z",
+            "updated_at": "2022-06-09T09:47:47.000000Z"
+        },
+        {
+            "id": 15,
+            "name": "Hijz",
+            "email": "Jizz@hotmail.com",
+            "email_verified_at": null,
+            "created_at": "2022-06-09T10:00:28.000000Z",
+            "updated_at": "2022-06-09T10:00:28.000000Z"
+        },
+        {
+            "id": 16,
+            "name": "Arabica",
+            "email": "Abc@dis.com",
+            "email_verified_at": null,
+            "created_at": "2022-06-09T10:26:58.000000Z",
+            "updated_at": "2022-06-09T10:26:58.000000Z"
+        },
+        {
+            "id": 17,
+            "name": "Esprey",
+            "email": "Gta@gmail.com",
+            "email_verified_at": null,
+            "created_at": "2022-06-09T10:31:27.000000Z",
+            "updated_at": "2022-06-09T10:31:27.000000Z"
+        }
+    ]
+}
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+------ Below is the register request (completed form) ------
+http://localhost:8000/api/register?name=minion&email=DespicableMe@illumination.com&password=zhar123&password_confirm=zhar123
 
-## Learning Laravel
+Response:
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+{
+    "name": "Minion",
+    "email": "DespicableMe@Illumination.com",
+    "updated_at": "2022-06-09T18:08:28.000000Z",
+    "created_at": "2022-06-09T18:08:28.000000Z",
+    "id": 59
+}
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-## Laravel Sponsors
+------ Below is the register request (incompleted/redundant form) ------
+http://localhost:8000/api/register?name=minion&email=DespicableMe@illumination.com&password=zhar123&password_confirm=zhar123
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+Response:
 
-### Premium Partners
+{
+    "message": "The data fill is required"
+}
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
 
-## Contributing
+------ Below is the login request (completed form) ------
+http://localhost:8000/api/login
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Response:
 
-## Code of Conduct
+{
+    "user": {
+        "id": 59,
+        "name": "Minion",
+        "email": "DespicableMe@Illumination.com",
+        "email_verified_at": null,
+        "created_at": "2022-06-09T18:08:28.000000Z",
+        "updated_at": "2022-06-09T18:08:28.000000Z"
+    },
+    "access_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiOWE4MmEyNjg0NjY1OGE3ZWYwNTFiZmIxNDMwMTExZDY4NjQ2ZTA5NWM3MTRhNjFkMGJmMDFiNTZkNmM0OGE1NzcxZDExODBmOTIxZDEyMDAiLCJpYXQiOjE2NTQ3OTgzODIuODAwOTMxLCJuYmYiOjE2NTQ3OTgzODIuODAwOTMzLCJleHAiOjE2ODYzMzQzODIuNzk2OTA5LCJzdWIiOiI1OSIsInNjb3BlcyI6W119.Ttu8tdaRMES3H9DsFC2mZTfHMAC5UKVv9_ujvX_KqSjbYGfIOSwIxa9uQYO6W1G8YUmETdCe1LrmzFh8Dnr0pqsLmWbriEl1cfRlvgcwOqCp_NBbjmdkNwB5nGGWCKVsDkmxl-erUaH8n_0CLqlJ4xuGakUTWbyu4zBsNZJnGhswp36r0xA1MdKpuiHIoJeAz3bupMiC9e-xsMr-NbdN8Zy2EejwRKU8kbgAPCUMGGg5BvwEhJBMQXc2QwLSaFwr0glTiMmiSUhKvidRb8dwUJHYf4r4xRmOisgjXGju6wOOPjGOkO-2hsYe4ceobRHYJ7RuYshuI0X9xtrsaRBl51hRA0_ql2t5f740y7rtZFhhRrujG7sAd4rqSJsk6ZXfzzOPdsREx_hRe31zypz7PDldGgQqOZhxfho5nj8B24IJvPsII15ZSIfmFjZ-nvkfRpYta71g6q6BD9dp6VmWQQVC_cqbqZfjI-xC3R2ByEe0o5tuiqSgUDDDSnViTeHZXCJH5-SpaO6rFvOhs4aZalfFT3m5cKL-UwnyUEuwAUGqbNhrzT9vnUeDEBnQWaDulkfE2_byP486S-d0-t4PrNuEqi_i5vU7sljwogOdoVvg6GGkUZaSqR9oeWQpVB7ePN3a9NimIar6_oxVoprtUzg0y_b7WRiYqa40NvE1oiI"
+}
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
-## Security Vulnerabilities
+------ Below is the login request (completed form with inexist data) ------
+http://localhost:8000/api/login
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Response:
 
-## License
+{
+    "message": "This User does not exist"
+}
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+------ Below is the login request (incomplete form) ------
+http://localhost:8000/api/login
+
+Response:
+
+{
+    "message": "The data fill is required"
+}
+
+
+------ Below is update request (completed form) ------
+http://localhost:8000/api/user/update/1
+
+Response:
+
+{
+    "code": 200,
+    "message": "Update Successfully",
+    "data": [
+        {
+            "id": 1,
+            "name": "Zharkuna",
+            "email": "zharkun@hotmail.sg",
+            "email_verified_at": null,
+            "created_at": "2022-06-09T09:00:04.000000Z",
+            "updated_at": "2022-06-09T18:20:09.000000Z"
+        }
+    ]
+}
+
+
+------ Below is the update request (incompleted form) ------
+http://localhost:8000/api/user/update/7
+
+Response:
+
+{
+    "message": "The data fill is required"
+}
+
+
+------ Below is the delete request ------
+http://localhost:8000/api/user/delete/7
+
+Response:
+
+{
+    "code": 200,
+    "message": "Success Deleted data",
+    "data": null
+}
+
+------ Below is the csv file request ------
+http://localhost:8000/api/files
+
+Response:
+
+{
+    "message": "The data in excel successfully uploaded to database"
+}
